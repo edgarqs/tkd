@@ -1,0 +1,15 @@
+/* styles.css */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+select, button {
+    margin: 10px;
+}
+
+#resultado {
+    margin-top: 20px;
+}

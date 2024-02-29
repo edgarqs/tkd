@@ -1,63 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Orden Aleatorio</title>
-  <style>
-    ul, h1, h2 {
-      font-family: Arial, sans-serif;
-    }
-  </style>
-  <script>
-    window.onload = function() {
-      // Definir los arrays
-      var array1 = ["Are Maki", "Momtong An Maki", "Momtong Maki", "Olgul Maki", "Jannsonal Momtong Bakat Maki", "Sonnal Momtong Maki", "Momtong Bakat Maki", "Olgul Bakat Maki", "Gechio Are Maki", "Batagson Momtong An Maki", "Batagson Momtong Maki", "Sonnal Are Maki", "Goduro Batagson Momtogn An Maki", "Gechio Momtong Maki", "Okgorro Are Maki", "Jannsonal Momtong Yop Maki", "Goduro Montong Maki", "Goduro Are Maki", "Jannsonal Are Maki", "Nulo Maki", "An Palmok Gechio Momtong Maki", "Jansonnal Momtong Maki"];
-      var array2 = ["Momtong Bande Jirugui", "Momtong Baro Jirugui", "Olgul Bande Jirugui", "Momtong Dubon Jirugui", "Sonnal An Chigui", "Pioson Kut Seuo Chirugui", "Dung Chumok Ape Chigui", "Me Chumok Neryo Jop Chigui", "Palkup Dollio Chigui", "Du Checho Jirugui", "Dung Chumok Bakat Chigui", "Yop Jirugui", "Sonnal Bakat Chigui", "Palkup Jop Chigui", "Sonnal Mok Chigui"];
-      var array3 = ["Kibon Chumbi", "Chebipum Mok Chigui", "Momtong Piochok Palkup Chigui", "Bituro Jansonnal Olgul Bakat Maki", "Bo Chumok Chumbi", "Gawi Maki", "Dangkio Ollyo Murup Chigui", "Piochok Chagui", "Oe Santul Maki", "Dangkio Tok Jirugui", "Tong Milgui Chumbi", "Akumson Kalchebi", "Murup Koki", "Piochok Jirugui", "Chagun Dol Chogui", "Dangkio Are Pionson Kut Checho Chirugui", "Me Chumok Are Piochok Chigui", "Batagson Tok Chigui", "Kumgang Maki", "Kul Dol Chogui", "Santul Maki"];
-
-      // Ordenar los arrays de manera aleatoria
-      array1.sort(function() {
-        return 0.5 - Math.random();
-      });
-      array2.sort(function() {
-        return 0.5 - Math.random();
-      });
-      array3.sort(function() {
-        return 0.5 - Math.random();
-      });
-
-      // Obtener los elementos <ul> donde se mostrarán las listas
-      var list1 = document.getElementById("lista1");
-      var list2 = document.getElementById("lista2");
-      var list3 = document.getElementById("lista3");
-
-      // Agregar elementos del array1 a la lista1
-      for (var i = 0; i < array1.length; i++) {
-        var listItem = document.createElement("li");
-        listItem.appendChild(document.createTextNode(array1[i]));
-        list1.appendChild(listItem);
-      }
-
-      // Agregar elementos del array2 a la lista2
-      for (var i = 0; i < array2.length; i++) {
-        var listItem = document.createElement("li");
-        listItem.appendChild(document.createTextNode(array2[i]));
-        list2.appendChild(listItem);
-      }
-
-      for (var i = 0; i < array3.length; i++) {
-        var listItem = document.createElement("li");
-        listItem.appendChild(document.createTextNode(array3[i]));
-        list3.appendChild(listItem);
-      }
-    };
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taekwondo Técnicas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h2>Maki:</h2>
-  <ul id="lista1"></ul>
-  <h2>Gong Kiok:</h2>
-  <ul id="lista2"></ul>
-  <h2>PUM:</h2>
-  <ul id="lista3"></ul>
+    <div class="container">
+        <h1>Selecciona tu cinturón y tipo de técnica:</h1>
+        <select id="cinturon">
+            <option value="cinta-blanca">Cinta Blanca</option>
+            <option value="cinta-amarilla">Cinta Amarilla</option>
+            <!-- Agregar más opciones según los niveles de cinturón -->
+        </select>
+
+        <select id="tipo-tecnica">
+            <option value="ataques">Ataques</option>
+            <option value="defensas">Defensas</option>
+            <option value="tecnicas-especiales">Técnicas Especiales</option>
+            <option value="patadas">Patadas</option>
+        </select>
+
+        <button onclick="mostrarTecnicas()">Mostrar Técnicas</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
