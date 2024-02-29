@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taekwondo Técnicas</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taekwondo Techniques</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center mb-4">Selecciona:</h1>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <select id="cinturon" class="form-control">
-                    <option value="" selected disabled>Cin</option>
-                    <option value="cinta-blanca">Cinta Blanca</option>
-                    <option value="cinta-amarilla">Cinta Amarilla</option>
-                    <option value="cinta-negra">Cinta Negra</option>
-                </select>
-            </div>
-            <div class="form-group col-md-6">
-                <select id="tipo-tecnica" class="form-control">
-                    <option value="" selected disabled>Tec</option>
-                    <option value="ataques">Ataques</option>
-                    <option value="defensas">Defensas</option>
-                    <option value="tecnicas-especiales">Técnicas Especiales</option>
-                    <option value="patadas">Patadas</option>
-                    <option value="todas">Todas las Técnicas</option>
-                </select>
-            </div>
-        </div>
-        <button id="mostrar-btn" class="btn btn-primary btn-block">Mostrar</button>
-        <div id="resultado" class="mt-4"></div>
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <h1 class="text-center mb-4">Técnicas de Taekwondo</h1>
+        <form action="tecnicas.html" method="GET">
+          <div class="form-group">
+            <label for="cinturon">Selecciona el cinturón:</label>
+            <select class="form-control" id="cinturon" name="cinturon">
+              <option value="negro1">Negro 1r DAN</option>
+              <option value="negro2">Negro 2ndo DAN</option>
+              <option value="negro3">Negro 3r DAN</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tecnica">Selecciona el tipo de técnica:</label>
+            <select class="form-control" id="tecnica" name="tecnica">
+              <option value="ataques">Ataques</option>
+              <option value="defensas">Defensas</option>
+              <option value="especiales">Técnicas Especiales</option>
+              <option value="patadas">Patadas</option>
+              <option value="todas">Todas las técnicas</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Mostrar Técnicas</button>
+        </form>
+      </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="main.js" defer></script>
+  </div>
 </body>
 </html>
