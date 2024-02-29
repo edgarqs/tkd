@@ -1,63 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Orden Aleatorio</title>
-  <style>
-    ul, h1, h2 {
-      font-family: Arial, sans-serif;
-    }
-  </style>
-  <script>
-    window.onload = function() {
-      // Definir los arrays
-      var array1 = ["Are Maki", "Momtong An Maki", "Momtong Maki", "Olgul Maki", "Jannsonal Momtong Bakat Maki", "Sonnal Momtong Maki", "Momtong Bakat Maki", "Olgul Bakat Maki", "Gechio Are Maki", "Batagson Momtong An Maki", "Batagson Momtong Maki", "Sonnal Are Maki", "Goduro Batagson Momtogn An Maki", "Gechio Momtong Maki", "Okgorro Are Maki", "Jannsonal Momtong Yop Maki", "Goduro Montong Maki", "Goduro Are Maki", "Jannsonal Are Maki", "Nulo Maki", "An Palmok Gechio Momtong Maki", "Jansonnal Momtong Maki"];
-      var array2 = ["Momtong Bande Jirugui", "Momtong Baro Jirugui", "Olgul Bande Jirugui", "Momtong Dubon Jirugui", "Sonnal An Chigui", "Pioson Kut Seuo Chirugui", "Dung Chumok Ape Chigui", "Me Chumok Neryo Jop Chigui", "Palkup Dollio Chigui", "Du Checho Jirugui", "Dung Chumok Bakat Chigui", "Yop Jirugui", "Sonnal Bakat Chigui", "Palkup Jop Chigui", "Sonnal Mok Chigui"];
-      var array3 = ["Kibon Chumbi", "Chebipum Mok Chigui", "Momtong Piochok Palkup Chigui", "Bituro Jansonnal Olgul Bakat Maki", "Bo Chumok Chumbi", "Gawi Maki", "Dangkio Ollyo Murup Chigui", "Piochok Chagui", "Oe Santul Maki", "Dangkio Tok Jirugui", "Tong Milgui Chumbi", "Akumson Kalchebi", "Murup Koki", "Piochok Jirugui", "Chagun Dol Chogui", "Dangkio Are Pionson Kut Checho Chirugui", "Me Chumok Are Piochok Chigui", "Batagson Tok Chigui", "Kumgang Maki", "Kul Dol Chogui", "Santul Maki"];
-
-      // Ordenar los arrays de manera aleatoria
-      array1.sort(function() {
-        return 0.5 - Math.random();
-      });
-      array2.sort(function() {
-        return 0.5 - Math.random();
-      });
-      array3.sort(function() {
-        return 0.5 - Math.random();
-      });
-
-      // Obtener los elementos <ul> donde se mostrarán las listas
-      var list1 = document.getElementById("lista1");
-      var list2 = document.getElementById("lista2");
-      var list3 = document.getElementById("lista3");
-
-      // Agregar elementos del array1 a la lista1
-      for (var i = 0; i < array1.length; i++) {
-        var listItem = document.createElement("li");
-        listItem.appendChild(document.createTextNode(array1[i]));
-        list1.appendChild(listItem);
-      }
-
-      // Agregar elementos del array2 a la lista2
-      for (var i = 0; i < array2.length; i++) {
-        var listItem = document.createElement("li");
-        listItem.appendChild(document.createTextNode(array2[i]));
-        list2.appendChild(listItem);
-      }
-
-      for (var i = 0; i < array3.length; i++) {
-        var listItem = document.createElement("li");
-        listItem.appendChild(document.createTextNode(array3[i]));
-        list3.appendChild(listItem);
-      }
-    };
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taekwondo Techniques</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h2>Maki:</h2>
-  <ul id="lista1"></ul>
-  <h2>Gong Kiok:</h2>
-  <ul id="lista2"></ul>
-  <h2>PUM:</h2>
-  <ul id="lista3"></ul>
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <h1 class="text-center mb-4">Técnicas de Taekwondo</h1>
+        <form action="tecnicas.html" method="GET">
+          <div class="form-group">
+            <label for="cinturon">Selecciona el cinturón:</label>
+            <select class="form-control" id="cinturon" name="cinturon">
+              <option value="negro1">Negro 1r DAN</option>
+              <option value="negro2">Negro 2ndo DAN</option>
+              <option value="negro3">Negro 3r DAN</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tecnica">Selecciona el tipo de técnica:</label>
+            <select class="form-control" id="tecnica" name="tecnica">
+              <option value="ataques">Ataques</option>
+              <option value="defensas">Defensas</option>
+              <option value="especiales">Técnicas Especiales</option>
+              <option value="patadas">Patadas</option>
+              <option value="todas">Todas las técnicas</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Mostrar Técnicas</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
