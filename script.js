@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     "Gechio Momtong Maki",
                     "Goduro Sonnal Dung Momtong Bakat Maki",
                     "Sonnal Okgoro Are Maki",
-                    "An Palmok Momtong Bakat Normativa de Examen 1º a 5 DAN Pag. 11 de 21 Maki",
+                    "An Palmok Momtong Bakat Maki",
                     "Jansonnal Olgul Maki",
                     "Yop Are Maki",
                     "An Palmok Goduro Momtong Maki", "Bam Chumok Sosum Chigui"],
